@@ -102,15 +102,36 @@ public class HelloApplication extends Application {
         btnLogin.setFont(Font.font(40));
         grid.add(btnLogin, 0, 3, 2, 1);
 
-        btnLogin.setOnAction(new EventHandler<ActionEvent>() {
+        Button btnSignUp = new Button("Sign Up");
+        btnSignUp.setFont(Font.font(40));
+        grid.add(btnSignUp, 1, 3, 2, 1);
+
+        btnSignUp.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 System.out.println("Hello");
                 try {
+                    Parent p = FXMLLoader.load(getClass().getResource("login-view.fxml"));
+                    Scene s = new Scene(p);
+                    stage.setScene(s);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        btnLogin.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    if (pfPassword == pfPassword){
                     Parent p = FXMLLoader.load(getClass().getResource("homepage.fxml"));
                     Scene s = new Scene(p);
                     stage.setScene(s);
                     stage.show();
+                    }
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
