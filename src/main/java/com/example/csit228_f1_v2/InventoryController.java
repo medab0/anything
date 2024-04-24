@@ -1,9 +1,15 @@
 package com.example.csit228_f1_v2;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,6 +37,8 @@ public class InventoryController {
     private TableColumn<Product, Integer> quantityColumn;
     @FXML
     private Label messageLabel;
+    @FXML
+    private Button btnBack;
 
     private ObservableList<Product> productList;
 
@@ -79,6 +87,17 @@ public class InventoryController {
             loadInventory();
         } else {
             messageLabel.setText("Please select a product to delete.");
+        }
+    }
+    @FXML
+    private void goToDashboard(ActionEvent event) throws IOException {
+        System.out.println("Redirecting to dashboard...");
+        Parent dashboard = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+        if (dashboard == null) {
+            System.err.println("Failed to load dashboard.fxml. Resource may not be found or null.");
+        } else {
+            Scene scene = btnBack.getScene();
+            scene.setRoot(dashboard);
         }
     }
 
@@ -140,4 +159,5 @@ public class InventoryController {
             messageLabel.setText("Error loading inventory.");
         }
     }
+
 }
