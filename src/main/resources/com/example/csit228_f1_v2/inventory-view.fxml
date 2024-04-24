@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.InventoryController">
+    <children>
+        <VBox alignment="CENTER" layoutX="250" layoutY="50" prefWidth="300" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="20.0" right="40.0" top="20.0" />
+            </padding>
+
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" text="Inventory" textAlignment="CENTER">
+                <font>
+                    <Font name="Arial Rounded MT Bold" size="35.0" />
+                </font>
+            </Label>
+
+            <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="262.0" VBox.vgrow="NEVER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="105.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="157.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label alignment="CENTER" text="Product ID:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <font>
+                            <Font name="Arial" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label alignment="CENTER" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <font>
+                            <Font name="Arial" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label alignment="CENTER" text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                        <font>
+                            <Font name="Arial" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label alignment="CENTER" text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                        <font>
+                            <Font name="Arial" size="18.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="productIdField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <TextField fx:id="nameField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="priceField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <TextField fx:id="quantityField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                </children>
+            </GridPane>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Button fx:id="saveButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#saveButtonClicked" prefHeight="37.0" text="Save" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="updateButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateButtonClicked" prefHeight="37.0" text="Update" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteButtonClicked" prefHeight="37.0" text="Delete" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                    </font>
+                </Button>
+            </HBox>
+
+            <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn prefWidth="100" text="Product ID">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="productId" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="100" text="Name">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="100" text="Price">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="price" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="100" text="Quantity">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="quantity" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            <VBox.margin>
+               <Insets left="30.0" top="5.0" />
+            </VBox.margin>
+            </TableView>
+
+            <Label fx:id="messageLabel" />
+        </VBox>
+    </children>
+</AnchorPane>
