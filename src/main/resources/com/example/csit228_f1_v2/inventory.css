@@ -1,0 +1,16 @@
+#btnSave {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+#btnUpdate {
+     -fx-background-color: blue;
+     -fx-text-fill: white;
+}
+#btnDelete {
+     -fx-background-color: red;
+     -fx-text-fill: white;
+}
+#btnBack {
+     -fx-background-color: #8DC5C5;
+     -fx-text-fill: white;
+}

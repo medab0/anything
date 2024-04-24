@@ -14,9 +14,9 @@
             </image>
         </ImageView>
         <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
-            <Label alignment="CENTER" text="User Details">
+            <Label alignment="CENTER" text="User Details" textFill="#aeaeae">
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                    <Font name="Swiss 721 Bold Extended BT" size="36.0" />
                 </font>
                 <VBox.margin>
                     <Insets bottom="50.0" />
@@ -32,12 +32,15 @@
                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 </rowConstraints>
                 <children>
-                    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label text="Username:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="0">
                         <font>
-                            <Font name="Arial" size="14.0" />
+                            <Font name="OCR A Extended" size="18.0" />
                         </font>
                     </Label>
-                    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Label text="Password:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <font>
+                     <Font name="OCR A Extended" size="18.0" />
+                  </font></Label>
                     <TextField fx:id="tfUsername" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                     <PasswordField fx:id="tfPassword" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 </children>
@@ -46,8 +49,14 @@
                 <VBox.margin>
                     <Insets bottom="50.0" top="20.0" />
                 </VBox.margin>
+            <font>
+               <Font name="OCR A Extended" size="14.0" />
+            </font>
             </Button>
-            <Button fx:id="btnBack" onAction="#goToDashboard" text="Back" />
+            <Button fx:id="btnBack" onAction="#goToDashboard" text="Back">
+            <font>
+               <Font name="OCR A Extended" size="14.0" />
+            </font></Button>
         </VBox>
     </children>
 </AnchorPane>

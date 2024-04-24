@@ -2,14 +2,14 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController" stylesheets="@login.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" >
+      <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
             <Image url="@background.png" />
          </image>
@@ -21,10 +21,34 @@
                <Insets bottom="20.0" right="40.0" top="20.0" />
             </padding>
 
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" text="Inventory Management">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" text="Inventory Management" textAlignment="CENTER">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="35.0" />
+                  <Font name="Swiss 721 Bold Extended BT" size="35.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007380073800738007">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
             </Label>
 
             <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="262.0" VBox.vgrow="NEVER">
@@ -37,29 +61,60 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label alignment="CENTER" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <Label alignment="CENTER" text="Username:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <font>
-                        <Font name="Arial" size="18.0" />
+                        <Font name="OCR A Extended" size="18.0" />
                      </font>
                   </Label>
                   <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1">
                      <font>
-                        <Font name="Arial" size="18.0" />
+                        <Font name="OCR A Extended" size="18.0" />
                      </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007380073800738007">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.3099630996309963">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6273062730627305">
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
                   </Label>
                   <TextField fx:id="tfUsername" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" />
                   <PasswordField fx:id="tfPassword" prefHeight="40.0" prefWidth="151.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
 
-            <Button fx:id="btnSignIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#userLogin" prefHeight="37.0" prefWidth="100.0" text="Sign In" textAlignment="CENTER">
+            <Button fx:id="btnSignIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#userLogin" prefHeight="37.0" prefWidth="120.0" text="Sign In" textAlignment="CENTER">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="19.0" />
+                  <Font name="OCR A Extended" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="btnRegister" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleRegister" prefHeight="37.0" prefWidth="100.0" text="Sign Up">
+            <Button fx:id="btnRegister" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleRegister" prefHeight="37.0" prefWidth="120.0" text="Sign Up">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="17.0" />
+                  <Font name="OCR A Extended" size="18.0" />
                </font>
             </Button>
 

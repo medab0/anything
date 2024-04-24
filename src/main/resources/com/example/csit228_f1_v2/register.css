@@ -1,0 +1,8 @@
+#btnRegister {
+    -fx-background-color: #4DFFFF;
+    -fx-text-fill: white;
+}
+#btnLogin {
+     -fx-background-color: #FF99CC;
+     -fx-text-fill: white;
+}

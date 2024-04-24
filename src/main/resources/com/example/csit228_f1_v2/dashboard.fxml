@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController">
     <children>
         <ImageView fitHeight="400.0" fitWidth="600.0">
             <image>
@@ -16,7 +16,7 @@
         <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
             <Label alignment="CENTER" text="Dashboard">
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                    <Font name="Swiss 721 Bold Extended BT" size="35.0" />
                 </font>
                 <VBox.margin>
                     <Insets bottom="50.0" />
@@ -24,7 +24,7 @@
             </Label>
             <Button fx:id="btnUserDetails" onAction="#openUserDetails" text="View User Details">
                 <font>
-                    <Font name="Arial" size="14.0" />
+                    <Font name="OCR A Extended" size="14.0" />
                 </font>
                 <VBox.margin>
                     <Insets bottom="40.0" />
@@ -32,7 +32,7 @@
             </Button>
             <Button fx:id="btnInventory" onAction="#openInventoryView" text="View Inventory">
                 <font>
-                    <Font name="Arial" size="14.0" />
+                    <Font name="OCR A Extended" size="14.0" />
                 </font>
                 <VBox.margin>
                     <Insets bottom="40.0" />
@@ -40,7 +40,7 @@
             </Button>
             <Button fx:id="btnLogout" onAction="#handleLogout" text="Logout">
                 <font>
-                    <Font name="Arial" size="14.0" />
+                    <Font name="OCR A Extended" size="14.0" />
                 </font>
             </Button>
         </VBox>

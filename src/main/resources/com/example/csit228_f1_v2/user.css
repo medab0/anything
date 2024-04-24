@@ -1,0 +1,8 @@
+#btnUpdate {
+    -fx-background-color: #00B2B5;
+    -fx-text-fill: white;
+}
+#btnBack {
+     -fx-background-color: #D27E88;
+     -fx-text-fill: white;
+}

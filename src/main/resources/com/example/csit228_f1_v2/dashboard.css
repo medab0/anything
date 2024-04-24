@@ -1,10 +1,12 @@
-.label {
-    -fx-font-size: 24px;
-    -fx-text-fill: blue;
-}
-
-#btnRegister {
-    -fx-background-color: green;
+#btnUserDetails {
+    -fx-background-color: #00B2B5;
     -fx-text-fill: white;
-    -fx-font-size: 14pt;
+}
+#btnInventory {
+     -fx-background-color: #CC8800;
+     -fx-text-fill: white;
+}
+#btnLogout {
+     -fx-background-color: #C176EE;
+     -fx-text-fill: white;
 }

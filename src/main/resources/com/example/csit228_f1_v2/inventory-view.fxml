@@ -3,14 +3,15 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.control.cell.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.InventoryController" stylesheets="@inventory.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@inventory.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.InventoryController">
     <children>
-        <ImageView fitHeight="800.0" fitWidth="600.0" >
+        <ImageView fitHeight="800.0" fitWidth="600.0">
             <image>
                 <Image url="@inventory.png" />
             </image>
@@ -22,14 +23,46 @@
 
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" text="Inventory" textAlignment="CENTER">
                 <font>
-                    <Font name="Arial Rounded MT Bold" size="35.0" />
+                    <Font name="Swiss 721 Bold Extended BT" size="35.0" />
                 </font>
+            <opaqueInsets>
+               <Insets top="10.0" />
+            </opaqueInsets>
+            <effect>
+               <Blend />
+            </effect>
+            <textFill>
+               <LinearGradient endX="0.799043062200957" startY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.007380073800738007">
+                        <color>
+                           <Color />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.8081180811808116">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
             </Label>
 
-            <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="262.0" VBox.vgrow="NEVER">
+            <GridPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="400.0" VBox.vgrow="NEVER">
                 <columnConstraints>
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="105.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="157.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="206.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.0" minWidth="10.0" prefWidth="194.0" />
                 </columnConstraints>
                 <rowConstraints>
                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -38,24 +71,24 @@
                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 </rowConstraints>
                 <children>
-                    <Label alignment="CENTER" text="Product ID:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label alignment="CENTER" text="Product ID:" textFill="#fffafa" GridPane.columnIndex="0" GridPane.rowIndex="0">
                         <font>
-                            <Font name="Arial" size="18.0" />
+                            <Font name="OCR A Extended" size="30.0" />
                         </font>
                     </Label>
-                    <Label alignment="CENTER" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label alignment="CENTER" text="Name:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
                         <font>
-                            <Font name="Arial" size="18.0" />
+                            <Font name="OCR A Extended" size="30.0" />
                         </font>
                     </Label>
-                    <Label alignment="CENTER" text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label alignment="CENTER" text="Price:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="2">
                         <font>
-                            <Font name="Arial" size="18.0" />
+                            <Font name="OCR A Extended" size="30.0" />
                         </font>
                     </Label>
-                    <Label alignment="CENTER" text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <Label alignment="CENTER" text="Quantity:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="3">
                         <font>
-                            <Font name="Arial" size="18.0" />
+                            <Font name="OCR A Extended" size="30.0" />
                         </font>
                     </Label>
                     <TextField fx:id="tfProduct" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
@@ -68,19 +101,27 @@
             <HBox alignment="CENTER" spacing="10">
                 <Button fx:id="btnSave" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#saveButtonClicked" prefHeight="37.0" text="Save" textAlignment="CENTER">
                     <font>
-                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                        <Font name="OCR A Extended" size="18.0" />
                     </font>
                 </Button>
                 <Button fx:id="btnUpdate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateButtonClicked" prefHeight="37.0" text="Update" textAlignment="CENTER">
                     <font>
-                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                        <Font name="OCR A Extended" size="18.0" />
                     </font>
                 </Button>
                 <Button fx:id="btnDelete" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteButtonClicked" prefHeight="37.0" text="Delete" textAlignment="CENTER">
                     <font>
-                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                        <Font name="OCR A Extended" size="18.0" />
                     </font>
                 </Button>
+                <Button fx:id="btnBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#goToDashboard" prefHeight="37.0" text="Back" textAlignment="CENTER">
+                    <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                    </font>
+                </Button>
+            <VBox.margin>
+               <Insets left="30.0" />
+            </VBox.margin>
             </HBox>
 
             <TableView fx:id="tableView" prefHeight="462.0" prefWidth="385.0" VBox.vgrow="ALWAYS">
