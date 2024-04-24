@@ -3,12 +3,14 @@ package com.example.csit228_f1_v2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -37,27 +39,41 @@ public class HelloController {
     private Button btnInventory;
 
     public static String currentUser;
-
+/*
     @FXML
     private void initialize() {
-        btnRegister.setVisible(true); // Hide register button
+        btnRegister.setVisible(false);
     }
+*/
 
     @FXML
-    private void userLogin(ActionEvent event) throws IOException {
+    private void userLogin(ActionEvent event) {
         String username = tfUsername.getText();
         String password = tfPassword.getText();
 
-        if (isValidLogin(username, password)) {
-            setCurrentUser(username);
-            // Navigate to dashboard
-            Parent dashboard = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
-            Scene scene = btnSignIn.getScene();
-            scene.setRoot(dashboard);
-        } else {
-            MessageText.setText("Incorrect username or password.");
+        try {
+            if (isValidLogin(username, password)) {
+                Parent dashboard = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+                if (dashboard == null) {
+                    System.err.println("Failed to load dashboard.fxml. Resource may not be found or null.");
+                } else {
+                    Scene scene = btnSignIn.getScene();
+                    scene.setRoot(dashboard);
+                }
+            } else {
+                MessageText.setText("Incorrect username or password.");
+            }
+        } catch (IOException e) {
+            System.err.println("Error loading dashboard.fxml: " + e.getMessage());
+            e.printStackTrace();
+        } catch (Exception ex) {
+            System.err.println("Unexpected error loading dashboard.fxml: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
+
+
+
 
     private boolean isValidLogin(String username, String password) {
         try (Connection c = MySQLConnection.getConnection();
@@ -103,17 +119,31 @@ public class HelloController {
 
     @FXML
     private void openUserDetails(ActionEvent event) throws IOException {
-        // Open user details view
         Parent userDetailsView = FXMLLoader.load(getClass().getResource("user-details.fxml"));
         Scene scene = btnUserDetails.getScene();
         scene.setRoot(userDetailsView);
     }
 
     @FXML
-    private void openInventoryView(ActionEvent event) throws IOException {
-        // Open inventory view
-        Parent inventoryView = FXMLLoader.load(getClass().getResource("inventory-view.fxml"));
-        Scene scene = btnInventory.getScene();
-        scene.setRoot(inventoryView);
+    private void openInventoryView(ActionEvent event) {
+        try {
+            Parent inventoryView = FXMLLoader.load(getClass().getResource("inventory-view.fxml"));
+            if (inventoryView == null) {
+                System.err.println("Failed to load inventory-view.fxml. Resource may not be found or null.");
+            } else {
+                Scene scene = new Scene(inventoryView, 600, 800);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            }
+        } catch (IOException e) {
+            System.err.println("Error loading inventory-view.fxml: " + e.getMessage());
+            e.printStackTrace();
+        } catch (Exception ex) {
+            System.err.println("Unexpected error loading inventory-view.fxml: " + ex.getMessage());
+            ex.printStackTrace();
+        }
     }
+
+
 }

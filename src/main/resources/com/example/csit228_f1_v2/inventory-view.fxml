@@ -51,49 +51,49 @@
                             <Font name="Arial" size="18.0" />
                         </font>
                     </Label>
-                    <TextField fx:id="productIdField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                    <TextField fx:id="nameField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                    <TextField fx:id="priceField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                    <TextField fx:id="quantityField" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <TextField fx:id="tfProduct" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <TextField fx:id="tfName" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="tfPrice" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <TextField fx:id="tfQuantity" prefHeight="41.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 </children>
             </GridPane>
 
             <HBox alignment="CENTER" spacing="10">
-                <Button fx:id="saveButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#saveButtonClicked" prefHeight="37.0" text="Save" textAlignment="CENTER">
+                <Button fx:id="btnSave" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#saveButtonClicked" prefHeight="37.0" text="Save" textAlignment="CENTER">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="19.0" />
                     </font>
                 </Button>
-                <Button fx:id="updateButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateButtonClicked" prefHeight="37.0" text="Update" textAlignment="CENTER">
+                <Button fx:id="btnUpdate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateButtonClicked" prefHeight="37.0" text="Update" textAlignment="CENTER">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="19.0" />
                     </font>
                 </Button>
-                <Button fx:id="deleteButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteButtonClicked" prefHeight="37.0" text="Delete" textAlignment="CENTER">
+                <Button fx:id="btnDelete" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteButtonClicked" prefHeight="37.0" text="Delete" textAlignment="CENTER">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="19.0" />
                     </font>
                 </Button>
             </HBox>
 
-            <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+            <TableView fx:id="tableView" prefHeight="462.0" prefWidth="385.0" VBox.vgrow="ALWAYS">
                 <columns>
-                    <TableColumn prefWidth="100" text="Product ID">
+                    <TableColumn fx:id="productIdColumn" prefWidth="125.0" text="Product ID">
                         <cellValueFactory>
                             <PropertyValueFactory property="productId" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn prefWidth="100" text="Name">
+                    <TableColumn fx:id="nameColumn" prefWidth="135.0" text="Name">
                         <cellValueFactory>
                             <PropertyValueFactory property="name" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn prefWidth="100" text="Price">
+                    <TableColumn fx:id="priceColumn" prefWidth="135.0" text="Price">
                         <cellValueFactory>
                             <PropertyValueFactory property="price" />
                         </cellValueFactory>
                     </TableColumn>
-                    <TableColumn prefWidth="100" text="Quantity">
+                    <TableColumn fx:id="quantityColumn" prefWidth="135.0" text="Quantity">
                         <cellValueFactory>
                             <PropertyValueFactory property="quantity" />
                         </cellValueFactory>

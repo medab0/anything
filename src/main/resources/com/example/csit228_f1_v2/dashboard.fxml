@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -8,11 +9,29 @@
     <children>
         <Label alignment="CENTER" text="Dashboard">
             <font>
-                <Font size="24.0" />
+                <Font name="Arial Rounded MT Bold" size="24.0" />
             </font>
+         <VBox.margin>
+            <Insets bottom="50.0" />
+         </VBox.margin>
         </Label>
-        <Button fx:id="btnUserDetails" onAction="#openUserDetails" text="View User Details" />
-        <Button fx:id="btnInventory" onAction="#openInventoryView" text="View Inventory" />
-        <Button fx:id="btnLogout" onAction="#handleLogout" text="Logout" />
+        <Button fx:id="btnUserDetails" onAction="#openUserDetails" text="View User Details">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="40.0" />
+         </VBox.margin></Button>
+        <Button fx:id="btnInventory" onAction="#openInventoryView" text="View Inventory">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="40.0" />
+         </VBox.margin></Button>
+        <Button fx:id="btnLogout" onAction="#handleLogout" text="Logout">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Button>
     </children>
 </VBox>
