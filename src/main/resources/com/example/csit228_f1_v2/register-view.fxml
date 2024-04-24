@@ -5,8 +5,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.RegisterController">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.RegisterController" stylesheets="@register.css">
     <children>
+        <ImageView fitHeight="400.0" fitWidth="600.0" >
+            <image>
+                <Image url="@background.jpg" />
+            </image>
+        </ImageView>
         <HBox alignment="CENTER" fillHeight="true" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
             <VBox fx:id="pnLogin" alignment="CENTER" layoutX="250" layoutY="50" prefWidth="300" spacing="10.0" HBox.hgrow="ALWAYS">

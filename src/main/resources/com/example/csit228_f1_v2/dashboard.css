@@ -1,0 +1,10 @@
+.label {
+    -fx-font-size: 24px;
+    -fx-text-fill: blue;
+}
+
+#btnRegister {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 14pt;
+}
