@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HelloController">
+    <children>
+        <Label alignment="CENTER" text="Dashboard">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnUserDetails" onAction="#openUserDetails" text="View User Details" />
+        <Button fx:id="btnInventory" onAction="#openInventoryView" text="View Inventory" />
+        <Button fx:id="btnLogout" onAction="#handleLogout" text="Logout" />
+    </children>
+</VBox>
